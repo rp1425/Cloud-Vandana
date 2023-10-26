@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+
+    <div align="center" class="main">
+
+        <h1>
+
+            </h3>
+            <form method="dialog">
+                First Name : <input type="text" name="Fname"><br> <br>
+                Last Name : <input type="text" name="Lname"><br> <br>
+                Date Of birth : <input type="date" name="dob"><br> <br>
+                Email : <input type="text" name="email1"><br> <br>
+
+                Gender :
+                Male <input type="checkbox" name="gender1">
+                Female<input type="checkbox" name="gender1"><br> <br> Country
+                : <select name="city1">
+                    <option>Select Country</option>
+                    <option>India</option>
+                    <option>US</option>
+                    <option>China</option>
+                    <option>Sri Lanka</option>
+
+                </select> <br /> <br />
+                <div class="container">
+                    <button type="submit" class="btn" onclick="openPopup()">Submit</button>
+                    <button type="reset" value="reset">reset</button>
+
+                    <div class="popup" id="popup">
+                        <h2>All details saved </h2>
+                        <button type="button" id="btn2" onclick="closePopup()">OK</button>
+                    </div>
+
+                </div>
+
+            </form>
+
+
+
+
+    </div>
+
+
+
+
+    </div>
+
+    <script>
+
+        let popup = document.getElementById("popup");
+        function openPopup() {
+            popup.classList.add("open-popUp");
+        }
+        function closePopup() {
+            popup.classList.remove("open-popUp");
+        }
+    </script>
+
+</body>
+
+</html>
+</body>
+
+</html>
