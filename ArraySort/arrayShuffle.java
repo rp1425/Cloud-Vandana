@@ -1,21 +1,29 @@
 package ArraySort;
 
-  public  class arrayShuffle {
+import java.util.Random;
+
+public class arrayShuffle {
     public static void main(String[] args) {
-
-		int[] array = { 1, 2, 3, 4, 5, 6, 7 };
-
-		
-
-		for (int i = 0; i < 3; i++) {
-			
-			int num = 7-i;
-			System.out.println(num);
-			for(int j = 1;j<5;j++) {
-				int num2 = 7-j;
-				System.out.println(num2);
-				}
-				}
-				
-			}
+        int[] array = {1, 2, 3, 4, 5, 6, 7};
+        shuffleArray(array);
+        
+        // Print the shuffled array
+        for (int value : array) {
+            System.out.print(value + " ");
+        }
+    }
+    
+    public static void shuffleArray(int[] array) {
+        int n = array.length;
+        Random random = new Random();
+        
+        for (int i = n - 1; i > 0; i--) {
+            int j = random.nextInt(i + 1);
+            
+            // Swap array[i] and array[j]
+            int temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+		}
+	}
 }
